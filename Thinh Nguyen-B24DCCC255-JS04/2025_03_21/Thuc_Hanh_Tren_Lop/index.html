@@ -1,50 +1,78 @@
 <!DOCTYPE html>
-<htmllang="en">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    <table width="100%" border="0" bgcolor="#FFCC00">
-        <tr>
-            <td align="center"><h2><b>PT Ứng Dụng Web - THIẾT KẾ FORM ĐƠN GIẢN</b></h2></b></td>
+    <table width="700" align="center" border="1" cellpadding="10">
+        <tr style="background-color: rgb(245, 166, 77);">
+            <td colspan="2" align="center">PT Ứng dụng Web - THIẾT KẾ FORM ĐƠN GIẢN</td>
         </tr>
-    </table>
-    <table width="100%" border="0">
         <tr>
-            <td width="40%" valign="top">
-                <table width="100%" cellpadding="20px">
-                    <tr align="left">
-                        <td>Họ và tên</td>
-                    </tr>
-                    <tr align="left">
-                        <td>Email</td>
-                    </tr>
-                    <tr align="left">
-                        <td>Số điện thoại</td>
-                    </tr>
-                    <tr align="left">
-                        <td>Quê quán</td>
-                    </tr>
-                    <tr align="left">
-                        <td>Giới tính</td>
-                    </tr>
-                    <tr align="left">
-                        <td>Kỹ năng</td>
-                    </tr>
-                    <tr align="left">
-                        <td>Ngày sinh</td>
-                    </tr>
-                </table>
+            <td width="200">Họ và tên</td>
+            <td>
+                <form action="" method="GET">
+                    <input type="text" name="hovaten" size="24" maxlength="30">
+                </form> 
             </td>
-            <td width="60%" valign="top">
-                <table border="1" width="100%" cellpadding="20px">
-                    <form action="" method="GET">  
-                        <input type="text" name="ho_ten" size="190%" maxlength="30" />  
-                    </form>  
-                </table>
-
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td>
+                <input type="email" name="email" id="email" size="24">
+            </td>
+        </tr>
+        <tr>
+            <td>Số điện thoại</td>
+            <td>
+                <input type="tel" name="sodienthoai" id="sodienthoai" size="24">
+            </td>
+        </tr>
+        <tr>
+            <td>Quê quán</td>
+            <td ali>
+                <select name="thanhpho" id="thanhpho">
+                    <option value="">--Chọn thành phố--</option>
+                    <option value="hanoi">Hà Nội</option>
+                    <option value="hcm">TP Hồ Chí Minh</option>
+                    <option value="namdinh">Nam Định</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Giới tính</td>
+            <td>
+               <input type="radio" name="gioitinh" value="nam">Nam
+               <input type="radio" name="gioitinh" value="nu">Nữ
+            </td>
+        </tr>
+        <tr>
+            <td>Kỹ năng</td>
+            <td>
+                <input type="checkbox" name="kynang" value="html">HTML
+                <input type="checkbox" name="kynang" value="css">CSS
+                <input type="checkbox" name="kynang" value="javascript">JS
+                <input type="checkbox" name="kynang" value="bootstrap">BOOTSTRAP
+            </td>
+        </tr>
+        <tr>
+            <td>Ngày sinh</td>
+            <td>
+               <input type="date" name="date_of_birth" id="date_of_birth">
+            </td>
+        </tr>
+        <tr>
+            <td>Giới thiệu bản thân</td>
+            <td>
+                <textarea name="gioi_thieu" cols="40" rows="7"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center" style="background-color: rgb(245, 166, 77);">
+                <input type="submit" name="submit" value="Submit">
+                <input type="reset" name="reset" value="Reset">
             </td>
         </tr>
     </table>

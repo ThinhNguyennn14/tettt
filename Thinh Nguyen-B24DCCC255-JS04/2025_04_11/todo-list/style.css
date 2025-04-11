@@ -1,0 +1,48 @@
+body {
+    background: #fdf6e3;
+    padding: 20px;
+}
+li:nth-child(odd) {
+    background-color: rgb(230, 136, 136);
+}
+h1 {
+    text-align: center;
+    color: #2f4f2f;
+}
+
+ul {
+    list-style-type: none;
+    max-width: 350px;
+    margin: 20px auto;
+}
+
+li {
+    background: #fff;
+    margin: 8px 0;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.morning {
+    background: #ffecb3;
+}
+
+.afternoon {
+    background: #e0f7fa;
+}
+.evening {
+    background-color: #f98e31;
+}
+.importan {
+    font-weight: bold;
+}  
+.note {
+    text-align: center;
+    color: #6b8e23;
+    font-style: italic;
+    margin-top: 20px;
+}

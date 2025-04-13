@@ -1,0 +1,18 @@
+p{
+    background-color: rgb(215, 237, 22);
+    opacity: 0.9;
+}
+h1{
+    width: 300px;
+    height: 100px;
+    background-color: rgba(12, 84, 84, 0.4);
+}
+div{
+    width: 100%;
+    height: 700px;
+    background-image: 
+    url('https://plus.unsplash.com/premium_photo-1677564923729-5eeacd594495?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+}
+h2{
+    color: aqua;
+}

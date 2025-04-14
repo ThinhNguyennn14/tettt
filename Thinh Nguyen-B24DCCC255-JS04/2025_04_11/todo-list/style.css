@@ -1,48 +1,71 @@
+
 body {
-    background: #fdf6e3;
-    padding: 20px;
-}
-li:nth-child(odd) {
-    background-color: rgb(230, 136, 136);
-}
-h1 {
-    text-align: center;
-    color: #2f4f2f;
-}
-
-ul {
+    font-family: Arial, sans-serif;
+    background-color: #fefbe9;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  ul {
     list-style-type: none;
-    max-width: 350px;
-    margin: 20px auto;
-}
+    padding-left: 0;
+  }
+  
+  #main-title {
+    color: #1c381d;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
 
-li {
-    background: #fff;
-    margin: 8px 0;
+  .todo-list {
+    border: 2px dashed #d99c30;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  ul > li {
+    margin: 5px 0;
     padding: 8px;
     border-radius: 5px;
-}
-
-input[type="checkbox"] {
-    margin-right: 10px;
-}
-
-.morning {
-    background: #ffecb3;
-}
-
-.afternoon {
-    background: #e0f7fa;
-}
-.evening {
-    background-color: #f98e31;
-}
-.importan {
+  }
+  
+  
+  .morning, .afternoon, .evening {
+    background-color: #fff2cc;
+  }
+  
+  .important.morning {
+    background-color: #f4a261;
     font-weight: bold;
-}  
-.note {
-    text-align: center;
-    color: #6b8e23;
-    font-style: italic;
+  }
+  
+  .afternoon {
+    background-color: #d2f4f2;
+  }
+  
+  [class~="evening"] {
+    background-color: #e0f7fa;
+  }
+  
+  .note[data-type="reminder"] {
     margin-top: 20px;
-}
+    font-style: italic;
+    color: #4caf50;
+  }
+  
+  li:hover {
+    background-color: #cde9ff;
+  }
+  
+  li:nth-child(odd) {
+    color: #333;
+  }
+  

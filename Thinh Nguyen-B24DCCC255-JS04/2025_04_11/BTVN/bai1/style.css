@@ -21,12 +21,15 @@ body {
     font-weight: bold;
     font-size: 10px;
 }
-.product-name,
+.product-name a,
 .product-price {
     margin: 5px 0;
-    
+    text-decoration: none;
 }
-.product-name:hover,
+.product-name a:visited {
+    color: #000; 
+}
+.product-name a:hover,
 .product-price:hover {
     color: red;
 }

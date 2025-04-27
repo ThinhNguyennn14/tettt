@@ -1,0 +1,22 @@
+h1{
+    border: 10px solid red;
+    margin: 30px;
+    padding: 20px 20px 30px 40px;
+}
+div{
+    background-color: red;
+    width: 200px;
+    height: 100px;
+    padding: 30px;
+    box-sizing: border-box;
+}
+p{
+    display: block;
+    background-color: orange;
+}
+h2{
+    display: inline;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: orange;
+}

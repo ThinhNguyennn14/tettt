@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.wrapper {
+  border: 1px solid black;
+  margin: 10px 10px;
+  padding: 2px;
+}
+
+.header {
+  border: 1px solid black;
+  padding: 1px;
+}
+
+.nav {
+  background-color: #d1dae3;
+  padding: 2px;
+  border: 1px solid black;
+  margin: 2px 1px;
+}
+
+.nav a {
+  color: blue;
+}
+
+.nav a:hover {
+  color: #22056e;
+  transition: 0.3s;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+}
+
+.sidebar {
+  padding-top: 20px;
+  width: 20%;
+  background-color: #f4f4f4;
+  border: 1px solid black;
+}
+
+.sidebar-menu {
+  margin: 30px auto 30px 30px;
+}
+
+.sidebar-menu a:hover {
+  color: #22056e;
+  transition: 0.3s;
+}
+
+.main-content {
+  width: 80%;
+  margin-left: 2px;
+}
+
+.main-content .container {
+  border: 1px solid black;
+  padding: 1px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 1px;
+  background-color: #fff;
+}
+
+.content .item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.content .item img {
+  width: 30px;
+  height: auto;
+}
+
+.content .item h1 {
+  margin: 0;
+  font-size: 30px;
+  color: #333;
+}
+
+.content hr {
+  border: 0;
+  height: 3px;
+  background-color: green;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.content .main_1 {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.content .left,
+.content .right {
+  width: 50%;
+  padding: 10px;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.content .left .article-img,
+.content .right .article-img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.content .left .button-img,
+.content .right .button-img {
+  width: 100px;
+  height: auto;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.content .left h2,
+.content .right h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.content .left p,
+.content .right p {
+  font-size: 14px;
+  color: #666;
+}
+
+.other-posts hr {
+  border: 0;
+  height: 2px;
+  margin-bottom: 40px;
+}
+
+.other-posts ul {
+  margin: 30px;
+}
+
+.footer {
+  border: 1px solid black;
+  margin-top: 1px;
+  padding: 10px;
+  background-color: #ccc;
+  text-align: center;
+  color: #333;
+}
+
+.footer .footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer .social-links a {
+  color: #0066cc;
+  text-decoration: none;
+  margin-left: 5px;
+}

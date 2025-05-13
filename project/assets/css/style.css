@@ -11,5 +11,14 @@ body {
   font-family: "Sofia Pro", sans-serif;
 }
 
-
 /* common */
+
+/* header */
+.container {
+  background-image: url("../img/banner_godzilla.png");
+  background-size: cover;
+  width: 99vw;
+  height: 1000px;
+  margin: 0 auto;
+}
+

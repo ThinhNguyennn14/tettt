@@ -25,10 +25,8 @@ var n;
     while (true) {
         var input = prompt("Vui lòng nhập một số lớn hơn 0:");
         n = parseInt(input);
-
-        // Kiểm tra xem n có phải là một số và lớn hơn 0 hay không
         if (typeof n === 'number' && n > 0) {
-            break; // Thoát khỏi vòng lặp
+            break;
         } else if (input === null) {
             alert("Bạn đã hủy nhập.");
             break;
@@ -36,7 +34,6 @@ var n;
             alert("Số bạn nhập không hợp lệ. Vui lòng nhập lại số lớn hơn 0.");
         }
     }
-
     if (n !== undefined) {
         if (n % 2 === 0) {
             alert(`${n} là số chẵn.`);

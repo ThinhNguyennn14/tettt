@@ -7,10 +7,13 @@
     <link rel="stylesheet" href="./assets/css/reset.css"/>
     <link rel="stylesheet" href="./assets/fonts/stylesheet.css"/>
     <link rel="stylesheet" href="./assets/css/style.css"/>
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;700&family=Nunito:wght@300&family=Rubik:wght@300;900&display=swap" rel="stylesheet">
+    </head>
 <body>
     <div class="main_wrapper">
-        <div class="container">
+        <div id="mainContainer" class="container">
             <header class="header">
                 <nav class="navbar">
                     <div class="navbar_menu">
@@ -33,12 +36,12 @@
             <section class="hero">
                 <div class="hero-text">
                     <h1>
-                        <span class="hero-title-main">GODZILLA</span><br>
-                        <span class="hero-title-sub">KING <span class="highlight-ofthe">OF THE</span> MONSTERS</span>
+                        <span id="heroTitleMain" class="hero-title-main">GODZILLA</span><br>
+                        <span id="heroTitleSub" class="hero-title-sub">KING <span class="highlight-ofthe">OF THE</span> MONSTERS</span>
                     </h1>
-                    <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.</p>
+                    <p id="heroDescription">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.</p>
                     <div class="hero-rating">
-                        <img src="./assets/img/Group 2.svg" alt="">
+                        <img id="heroRatingImg" src="./assets/img/Group 2.svg" alt="Rating">
                     </div>
                     <div class="hero-buttons">
                         <a href="#" class="hero-watch-btn">Xem Ngay</a>
@@ -53,27 +56,27 @@
                 <div class="movie-carousel-container">
                     <div class="movie-carousel-wrapper">
                         <div class="movie-carousel">
-                            <div class="movie-item">
+                            <div class="movie-item" data-index="0">
                                 <img src="./assets/img/Rectangle 6.png" alt="Movie 1">
                                 <div class="movie-score">56</div>
                             </div>
-                            <div class="movie-item">
+                            <div class="movie-item" data-index="1">
                                 <img src="./assets/img/Rectangle 7.jpg" alt="Movie 2">
                                 <div class="movie-score">395</div>
                             </div>
-                            <div class="movie-item">
+                            <div class="movie-item" data-index="2">
                                 <img src="./assets/img/Rectangle 8.png" alt="Movie 3">
                                 <div class="movie-score">1243</div>
                             </div>
-                            <div class="movie-item">
+                            <div class="movie-item" data-index="3">
                                 <img src="./assets/img/Rectangle 9.png" alt="Movie 4">
                                 <div class="movie-score">123</div>
                             </div>
-                            <div class="movie-item">
+                            <div class="movie-item" data-index="4">
                                 <img src="./assets/img/Rectangle 10.png" alt="Movie 5">
                                 <div class="movie-score">456</div>
                             </div>
-                            <div class="movie-item">
+                            <div class="movie-item" data-index="5">
                                 <img src="./assets/img/Rectangle 11.png" alt="Movie 6">
                                 <div class="movie-score">456</div>
                             </div>
@@ -86,5 +89,6 @@
             </section>
         </div>
     </div>
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>

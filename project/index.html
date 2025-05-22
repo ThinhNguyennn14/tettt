@@ -3,92 +3,345 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./assets/css/reset.css"/>
-    <link rel="stylesheet" href="./assets/fonts/stylesheet.css"/>
-    <link rel="stylesheet" href="./assets/css/style.css"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;700&family=Nunito:wght@300&family=Rubik:wght@300;900&display=swap" rel="stylesheet">
-    </head>
+    <title>Grocerymart</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/fonts/stylesheet.css">
+</head>
 <body>
-    <div class="main_wrapper">
-        <div id="mainContainer" class="container">
-            <header class="header">
-                <nav class="navbar">
-                    <div class="navbar_menu">
-                        <a href="#" class="navbar_link">Movies</a>
-                        <a href="#" class="navbar_link">TV Shows</a>
-                        <a href="#" class="navbar_link">Documentaries</a>
+    <div class="container">
+        <header class="main-header">
+            <div class="header-content">
+                <div class="left-section">
+                    <div class="logo">
+                        <img src="./assets/img/logo.svg" alt="logo">
+                        <span>grocerymart</span>
                     </div>
-                    <div class="navbar_logo">
-                        <img src="./assets/img/focusreel.png" alt="focusreel">
+                    <nav class="main-nav">
+                        <div class="nav-item">
+                            <span>Departments</span>
+                            <img src="./assets/img/arrow-down.svg" alt="muiten">
+                            <div class="dropdown">
+                                <div class="menu-item">
+                                    <div class="icon-wrapper">
+                                        <img src="./assets/img/cate-1.1.svg" alt="circle" class="icon-bg" />
+                                        <img src="./assets/img/cate-1.2.svg" alt="icon" class="icon-img" />
+                                    </div>
+                                    <span class="menu-label">All Departments</span>
+                                </div>
+                                <div class="drop-content">
+                                    <div class="dropdown-item">Savings & Featured Shops</div>
+                                    <div class="dropdown-item">Electronics</div>
+                                    <div class="dropdown-item">Clothing, Shoes & Accessories</div>
+                                    <div class="dropdown-item">Home, Furniture & Appliances</div>
+                                    <div class="dropdown-item">Toys & Video Games</div>
+                                    <div class="dropdown-item">Home Improvement</div>
+                                </div>
+                            </div>    
+                        </div>
+                        <div class="nav-item">
+                            <span>Grocery</span>
+                            <img src="./assets/img/arrow-down.svg" alt="muiten">
+                            <div class="dropdown">
+                                <div class="menu-item">
+                                    <div class="icon-wrapper">
+                                        <img src="./assets/img/cate-7.1.svg" alt="circle" class="icon-bg" />
+                                        <img src="./assets/img/cate-7.2.svg" alt="icon" class="icon-img" />
+                                    </div>
+                                    <span class="menu-label">Grocery</span>
+                                </div>
+                                <div class="drop-content">
+                                    <div class="dropdown-item">Shop All</div>
+                                    <div class="dropdown-item">Grilling Foods</div>
+                                    <div class="dropdown-item">Spring Flavors</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nav-item">
+                            <span>Beauty</span>
+                            <img src="./assets/img/arrow-down.svg" alt="muiten">
+                            <div class="dropdown">
+                                <div class="menu-item">
+                                    <div class="icon-wrapper">
+                                        <img src="./assets/img/cate-19.1.svg" alt="circle" class="icon-bg" />
+                                        <img src="./assets/img/cate-19.2.svg" alt="icon" class="icon-img" />
+                                    </div>
+                                    <span class="menu-label">Premium Beauty</span>
+                                </div>
+                                <div class="drop-content">
+                                    <div class="dropdown-item">Skincare</div>
+                                    <div class="dropdown-item">Beauty Tech & Tools</div>
+                                    <div class="dropdown-item">Men's Grooming</div>
+                                    <div class="dropdown-item">Bath & Body</div>
+                                    <div class="dropdown-item">Makeup</div>
+                                    <div class="dropdown-item">Fragrance</div>
+                                    <div class="dropdown-item">Nail Care</div>
+                                    <div class="dropdown-item">Hair Care</div>
+                                    <div class="dropdown-item">Hair Color</div>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="auth-buttons">
+                    <button class="btn sign-in">Sign In</button>
+                    <button class="btn sign-up">Sign Up</button>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="banner">
+                <img src="./assets/img/item_1.png" alt="banner" class="banner-img">
+            </div>
+            <section class="categories-section">
+                <div class="section-header">
+                    <h2>Browse Categories</h2>
+                </div>
+                <div class="category-cards">
+                    <div class="category-card">
+                        <div class="card-image">
+                            <img src="./assets/img/item-1 (1).png" alt="Coffee Product 1">
+                        </div>
+                        <div class="card-info">
+                            <p class="price-range">$24 - $150</p>
+                            <p class="description">New sumatra mandeling coffe blend</p>
+                        </div>
                     </div>
-                    <div class="navbar_actions">
-                        <a href="#" class="navbar_search"><img src="./assets/img/eva_search-fill.svg" alt="search"></a>
-                        <a href="#" class="navbar_notify"><img src="./assets/img/Vector.svg" alt="thongbao"></a>
-                        <a href="#" class="navbar_login">Log in</a>
-                        <span class="navbar_separator">/</span>
-                        <a href="#" class="navbar_signup">Sign up</a>
+                    <div class="category-card">
+                        <div class="card-image">
+                            <img src="./assets/img/item-2.png" alt="Coffee Product 2">
+                        </div>
+                        <div class="card-info">
+                            <p class="price-range">$37 - $160</p>
+                            <p class="description">Espresso arabica and robusta beans</p>
+                        </div>
                     </div>
-                </nav>
-            </header>
-            <section class="hero">
-                <div class="hero-text">
-                    <h1>
-                        <span id="heroTitleMain" class="hero-title-main">GODZILLA</span><br>
-                        <span id="heroTitleSub" class="hero-title-sub">KING <span class="highlight-ofthe">OF THE</span> MONSTERS</span>
-                    </h1>
-                    <p id="heroDescription">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.</p>
-                    <div class="hero-rating">
-                        <img id="heroRatingImg" src="./assets/img/Group 2.svg" alt="Rating">
-                    </div>
-                    <div class="hero-buttons">
-                        <a href="#" class="hero-watch-btn">Xem Ngay</a>
-                        <a href="#" class="hero-trailer-btn">Xem Trailer</a>
+                    <div class="category-card">
+                        <div class="card-image">
+                            <img src="./assets/img/item-3.png" alt="Coffee Product 3">
+                        </div>
+                        <div class="card-info">
+                            <p class="price-range">$32 - $160</p>
+                            <p class="description">Lavazza top class whole bean coffee blend</p>
+                        </div>
                     </div>
                 </div>
             </section>
-            <section class="movie-section">
-                <div class="movie-header">
-                    <h2>Popular Movies</h2>
+            <section class="simple-product-listing">
+                <div class="listing-header">
+                    <h2>Total Lavazza 1320</h2>
+                    <button class="simple-filter-btn"> 
+                        <span class="font-btn">Filter</span>
+                        <img src="./assets/img/filter.svg" alt="filter">
+                    </button>
                 </div>
-                <div class="movie-carousel-container">
-                    <div class="movie-carousel-wrapper">
-                        <div class="movie-carousel">
-                            <div class="movie-item" data-index="0">
-                                <img src="./assets/img/Rectangle 6.png" alt="Movie 1">
-                                <div class="movie-score">56</div>
-                            </div>
-                            <div class="movie-item" data-index="1">
-                                <img src="./assets/img/Rectangle 7.jpg" alt="Movie 2">
-                                <div class="movie-score">395</div>
-                            </div>
-                            <div class="movie-item" data-index="2">
-                                <img src="./assets/img/Rectangle 8.png" alt="Movie 3">
-                                <div class="movie-score">1243</div>
-                            </div>
-                            <div class="movie-item" data-index="3">
-                                <img src="./assets/img/Rectangle 9.png" alt="Movie 4">
-                                <div class="movie-score">123</div>
-                            </div>
-                            <div class="movie-item" data-index="4">
-                                <img src="./assets/img/Rectangle 10.png" alt="Movie 5">
-                                <div class="movie-score">456</div>
-                            </div>
-                            <div class="movie-item" data-index="5">
-                                <img src="./assets/img/Rectangle 11.png" alt="Movie 6">
-                                <div class="movie-score">456</div>
+                <div class="simple-product-grid">
+                    <div class="simple-product-card">
+                        <img src="./assets/img/heart.svg" alt="Love" class="love">
+                        <img src="./assets/img/item-1 (2).png" alt="Lavazza Product 1">
+                        <p class="simple-product-title">Coffee Beans - Espresso Arabica and Robusta Beans</p>
+                        <p class="simple-product-brand">Lavazza</p>
+                        <div class="product-meta">
+                            <span class="product-price">$47.00</span>
+                            <div class="product-rating">
+                                <img src="./assets/img/star.svg" alt="Star Rating" class="star-image">
+                                <span class="rating-value">4.3</span>
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-nav">
-                        <img src="./assets/img/ic_round-navigate-next.svg" alt="Next">
+                    <div class="simple-product-card">
+                        <img src="./assets/img/heart.svg" alt="Love" class="love">
+                        <img src="./assets/img/item-2 (1).png" alt="Lavazza Product 2">
+                        <p class="simple-product-title">Lavazza Coffee Blends - Try the Italian Espresso</p>
+                        <p class="simple-product-brand">Lavazza</p>
+                        <div class="product-meta">
+                            <span class="product-price">$53.00</span>
+                            <div class="product-rating">
+                                <img src="./assets/img/star.svg" alt="Star Rating" class="star-image">
+                                <span class="rating-value">3.4</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="simple-product-card">
+                        <img src="./assets/img/heart.svg" alt="Love" class="love">
+                        <img src="./assets/img/item-3 (1).png" alt="Lavazza Product 3">
+                        <p class="simple-product-title">Lavazza - Caffè Espresso Black Tin - Ground coffee</p>
+                        <p class="simple-product-brand">Wellekcoffee</p>
+                        <div class="product-meta">
+                            <span class="product-price">$99.99</span>
+                            <div class="product-rating">
+                                <img src="./assets/img/star.svg" alt="Star Rating" class="star-image">
+                                <span class="rating-value">5.0</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="simple-product-card">
+                        <img src="./assets/img/heart.svg" alt="Love" class="love">
+                        <img src="./assets/img/item-4.png" alt="Lavazza Product 4">
+                        <p class="simple-product-title">Qualità Oro Mountain Grown - Espresso Coffee Beans</p>
+                        <p class="simple-product-brand">Lavazza</p>
+                        <div class="product-meta">
+                            <span class="product-price">$38.56</span>
+                            <div class="product-rating">
+                                <img src="./assets/img/star.svg" alt="Star Rating" class="star-image">
+                                <span class="rating-value">4.4</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="simple-product-card">
+                        <img src="./assets/img/heart.svg" alt="Love" class="love">
+                        <img src="./assets/img/item-1 (2).png" alt="Lavazza Product 5">
+                        <p class="simple-product-title">Coffee Beans - Espresso Arabica and Robusta Beans</p>
+                        <p class="simple-product-brand">Lavazza</p>
+                        <div class="product-meta">
+                            <span class="product-price">$47.00</span>
+                            <div class="product-rating">
+                                <img src="./assets/img/star.svg" alt="Star Rating" class="star-image">
+                                <span class="rating-value">4.3</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="simple-product-grid">
+                    <div class="simple-product-card">
+                        <img src="./assets/img/heart.svg" alt="Love" class="love">
+                        <img src="./assets/img/item-2 (1).png" alt="Lavazza Product 6">
+                        <p class="simple-product-title">Lavazza Coffee Blends - Try the Italian Espresso</p>
+                        <p class="simple-product-brand">Lavazza</p>
+                        <div class="product-meta">
+                            <span class="product-price">$53.00</span>
+                            <div class="product-rating">
+                                <img src="./assets/img/star.svg" alt="Star Rating" class="star-image">
+                                <span class="rating-value">3.4</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="simple-product-card">
+                        <img src="./assets/img/heart.svg" alt="Love" class="love">
+                        <img src="./assets/img/item-3 (1).png" alt="Lavazza Product 7">
+                        <p class="simple-product-title">Lavazza - Caffè Espresso Black Tin - Ground coffee</p>
+                        <p class="simple-product-brand">Wellekcoffee</p>
+                        <div class="product-meta">
+                            <span class="product-price">$99.99</span>
+                            <div class="product-rating">
+                                <img src="./assets/img/star.svg" alt="Star Rating" class="star-image">
+                                <span class="rating-value">5.0</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="simple-product-card">
+                        <img src="./assets/img/heart.svg" alt="Love" class="love">
+                        <img src="./assets/img/item-4.png" alt="Lavazza Product 8">
+                        <p class="simple-product-title">Qualità Oro Mountain Grown - Espresso Coffee Beans</p>
+                        <p class="simple-product-brand">Lavazza</p>
+                        <div class="product-meta">
+                            <span class="product-price">$38.56</span>
+                            <div class="product-rating">
+                                <img src="./assets/img/star.svg" alt="Star Rating" class="star-image">
+                                <span class="rating-value">4.4</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="simple-product-card">
+                        <img src="./assets/img/heart.svg" alt="Love" class="love">
+                        <img src="./assets/img/item-1 (2).png" alt="Lavazza Product 9">
+                        <p class="simple-product-title">Coffee Beans - Espresso Arabica and Robusta Beans</p>
+                        <p class="simple-product-brand">Lavazza</p>
+                        <div class="product-meta">
+                            <span class="product-price">$47.00</span>
+                            <div class="product-rating">
+                                <img src="./assets/img/star.svg" alt="Star Rating" class="star-image">
+                                <span class="rating-value">4.3</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="simple-product-card">
+                        <img src="./assets/img/heart.svg" alt="Love" class="love">
+                        <img src="./assets/img/item-2 (1).png" alt="Lavazza Product 10">
+                        <p class="simple-product-title">Lavazza Coffee Blends - Try the Italian Espresso</p>
+                        <p class="simple-product-brand">Lavazza</p>
+                        <div class="product-meta">
+                            <span class="product-price">$53.00</span>
+                            <div class="product-rating">
+                                <img src="./assets/img/star.svg" alt="Star Rating" class="star-image">
+                                <span class="rating-value">3.4</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
-        </div>
+        </main>
+        <footer class="main-footer">
+            <div class="footer-top">
+                <div class="container footer-columns">
+                    <div class="footer-column about-us">
+                        <div class="logo">
+                            <img src="./assets/img/logo.svg" alt="logo">
+                            <span>grocerymart</span>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, maxime et veniam eligendi rem voluptatibus.</p>
+                        <div class="newsletter">
+                            <label for="newsletter-email">Receive product news and updates.</label>
+                            <div class="newsletter-input">
+                                <input type="email" id="newsletter-email" placeholder="Email address">
+                                <button class="send-btn">SEND</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-column shop">
+                        <h3>SHOP</h3>
+                        <ul>
+                            <li><a href="#">All Departments</a></li>
+                            <li><a href="#">Fashion Deals</a></li>
+                            <li><a href="#">Electronics Discounts</a></li>
+                            <li><a href="#">Home & Living Specials</a></li>
+                            <li><a href="#">Beauty Bargains</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column support">
+                        <h3>SUPPORT</h3>
+                        <ul>
+                            <li><a href="#">Store locator</a></li>
+                            <li><a href="#">Order status</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column company">
+                        <h3>COMPANY</h3>
+                        <ul>
+                            <li><a href="#">Customer Service</a></li>
+                            <li><a href="#">Terms of Use</a></li>
+                            <li><a href="#">Privacy</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Affiliates</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column contact">
+                        <h3>CONTACT</h3>
+                        <div class="contact-info">
+                            <p><strong>Email:</strong> <a href="mailto:contact@grocerymart.com">thinhnguyen14.ptit@gmail.com</a></p>
+                            <p><strong>Hotline:</strong> 0912229120</p>
+                            <p><strong>Address:</strong> No. 11D, Lot A10, Nam Trung Yen urban area, Yen Hoa Ward, Cau Giay District, City, Hanoi</p>
+                            <p><strong>Hours:</strong> M - F 08:00am - 06:00pm</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container bottom-content">
+                    <div class="copyright">
+                        © 2025 Grocery Mart. All rights reserved.
+                    </div>
+                    <div class="social-icon">
+                        <img src="./assets/img/facebook.svg" alt="Facebook" class="facebook">
+                        <img src="./assets/img/youtube.svg" alt="Youtube" class="youtube">
+                        <img src="./assets/img/tiktok.svg" alt="Tiktok" class="tiktok">
+                        <img src="./assets/img/twitter.svg" alt="Twitter" class="twitter">
+                        <img src="./assets/img/linkedin.svg" alt="Linkedin" class="linkedin">
+                    </div>
+                </div>
+            </div>
+        </footer>
     </div>
-    <script src="./assets/js/script.js"></script>
 </body>
 </html>
+    

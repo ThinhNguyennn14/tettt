@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Get references to HTML elements
+    
     const maSVInput = document.getElementById('maSV');
     const hoTenInput = document.getElementById('hoTen');
     const emailInput = document.getElementById('email');

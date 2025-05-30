@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ví dụ về Đối tượng JavaScript</title>
+</head>
+<body>
+    <script> 
+        let student1 = {id:"ript001",name:"Nam Chan Hoan",salary:40000000};
+        document.write("ID: " + student1.id + "<br> Name: " + student1.name + "<br> Lương: " + student1.salary); 
+
+        document.write("<br><br>");
+
+        let student2 = new Object(); 
+        student2.id = "ript001"; 
+        student2.name = "Nam Chan Hoan"; 
+        student2.salary = 4000; 
+        document.write(student2.id + " " + student2.name + " " + student2.salary); 
+        
+        document.write("<br><br>");
+
+        function Student(id, name, salary){ 
+            this.id = id; 
+            this.name = name; 
+            this.salary = salary; 
+        } 
+        let nam = new Student("ript001","Nam Chan Hoan",40000000); 
+        document.write(nam.id + " " + nam.name + " " + nam.salary); 
+
+        document.write("<br><br>");
+
+        class Person{
+            name;
+            age;
+            salary;
+            hello(){
+                document.write("Hello "+ this.name);
+             }
+
+             changeSalary(newSalary){
+                this.salary = newSalary;
+             }
+
+        }
+
+        a = new Person();
+        a.name = "Park Jung Hoan";
+        a.hello();
+        a.salary = 1;
+        document.write('<br>'+a.name + ': ' + a.salary);
+        a.changeSalary(12);
+        document.write('<br>'+a.name + ': ' + a.salary);
+
+    
+
+    </script> 
+</body>
+</html>

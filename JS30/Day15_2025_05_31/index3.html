@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Product {
+            constructor(id, name, price, quantity) {
+                this.id = id;
+                this.name = name;
+                this.price = price;
+                this.quantity = quantity;
+            }
+        }
+
+        let Product = [];
+
+        function addProduct(id, name, price, quantity) {
+            const product = new Product(id, name, price, quantity);
+            Product.push(product);
+            console.log(`Da them san pham ${name}`);
+        }
+
+        function tongGiaTriHangTonKho() {
+            let total = 0;
+            for (let product of Product) {
+                total += product.price * product.quantity;
+            }
+            return total;
+        }
+
+        function sanPhamCoGiaTriCaoNhat() {
+            if (Product.length === 0) {
+                return null;
+            }
+            let maxPrice = Product[0];
+            for (let product of Product) {
+                if (product.price > maxPrice.price) {
+                    maxPrice = product;
+                }
+            }
+            return maxPrice;
+        }
+    </script>
+</body>
+</html>

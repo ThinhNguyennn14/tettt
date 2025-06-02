@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Employee {
+            constructor(name, position, baseSalary, workingDays) {
+                this.name = name;
+                this.position = position;
+                this.baseSalary = baseSalary;
+                this.workingDays = workingDays;
+            }
+
+            calculateSalary() {
+                return this.baseSalary * this.workingDays;
+            }
+
+            show() {
+                console.log("Name " + this.name);
+                console.log("Position " + this.position);
+                console.log("Base salary " + this.baseSalary);
+                console.log("Workingdays " + this.workingDays);
+            }
+        }
+
+        const employee1 = new Employee("Nguyen Duc Thinh", "Dev", 500000, 22)
+        const employee2 = new Employee("Nguyen Thi Thu Thuy", "Des", 60000, 23)
+
+        employee1.calculateSalary();
+        employee2.calculateSalary();
+
+        employee1.show();
+        employee2.show();
+    </script>
+</body>
+</html>

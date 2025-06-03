@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Sản Phẩm</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+    <div class="container mx-auto p-4">
+        <h1 class="text-3xl font-bold text-center mb-6 text-gray-800">Quản Lý Sản Phẩm</h1>
+
+        <div class="bg-white p-6 rounded-lg shadow-md mb-6">
+            <h2 class="text-xl font-semibold mb-4 text-gray-700">Thêm / Sửa Sản Phẩm</h2>
+            <div class="grid grid-cols-1 gap-4 md:grid-cols-4">
+                <input id="productId" type="number" placeholder="ID" class="border p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400">
+                <input id="productName" type="text" placeholder="Tên" class="border p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400">
+                <input id="productPrice" type="number" placeholder="Giá" class="border p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400">
+                <input id="productQuantity" type="number" placeholder="Số lượng" class="border p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400">
+            </div>
+            <button id="addButton" class="mt-4 bg-blue-600 text-white p-2 rounded hover:bg-blue-700 transition duration-200">Thêm</button>
+            <button id="saveEditButton" class="mt-4 bg-green-600 text-white p-2 rounded hover:bg-green-700 transition duration-200 hidden">Lưu Thay Đổi</button>
+            <button id="cancelEditButton" class="mt-4 bg-gray-400 text-white p-2 rounded hover:bg-gray-500 transition duration-200 hidden ml-2">Hủy</button>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-md mb-6">
+            <h2 class="text-xl font-semibold mb-4 text-gray-700">Tìm Kiếm Sản Phẩm</h2>
+            <div class="flex gap-4">
+                <input id="searchProductId" type="number" placeholder="Nhập ID sản phẩm cần tìm" class="border p-2 rounded flex-grow focus:outline-none focus:ring-2 focus:ring-purple-400">
+                <button id="searchButton" class="bg-purple-600 text-white p-2 rounded hover:bg-purple-700 transition duration-200">Tìm kiếm</button>
+                <button id="clearSearchButton" class="bg-gray-500 text-white p-2 rounded hover:bg-gray-600 transition duration-200">Xóa tìm kiếm</button>
+            </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-xl font-semibold mb-4 text-gray-700">Danh Sách Sản Phẩm</h2>
+            <table id="productTable" class="w-full border-collapse">
+                <thead>
+                    <tr class="bg-gray-200 text-gray-700">
+                        <th class="border p-2 text-left">ID</th>
+                        <th class="border p-2 text-left">Tên</th>
+                        <th class="border p-2 text-left">Giá</th>
+                        <th class="border p-2 text-left">Số lượng</th>
+                        <th class="border p-2 text-left">Tổng giá trị</th>
+                        <th class="border p-2 text-left">Hành động</th>
+                    </tr>
+                </thead>
+                <tbody id="productList"></tbody>
+            </table>
+        </div>
+
+        <div class="mt-6 bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-xl font-semibold mb-4 text-gray-700">Thống Kê Kho Hàng</h2>
+            <p id="totalValue" class="text-lg text-gray-700">Tổng giá trị hàng tồn kho: 0 VND</p>
+            <p id="mostExpensive" class="text-lg text-gray-700">Sản phẩm đắt nhất: Không có</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script> 
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Sản Phẩm</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+    <div class="container mx-auto p-4">
+        <h1 class="text-3xl font-bold text-center mb-6">Quản Lý Sản Phẩm</h1>
+
+        <!-- Form thêm sản phẩm -->
+        <div class="bg-white p-6 rounded-lg shadow-md mb-6">
+            <h2 class="text-xl font-semibold mb-4">Thêm Sản Phẩm Mới</h2>
+            <div class="grid grid-cols-1 gap-4 md:grid-cols-4">
+                <input id="productId" type="number" placeholder="ID" class="border p-2 rounded">
+                <input id="productName" type="text" placeholder="Tên" class="border p-2 rounded">
+                <input id="productPrice" type="number" placeholder="Giá" class="border p-2 rounded">
+                <input id="productQuantity" type="number" placeholder="Số lượng" class="border p-2 rounded">
+            </div>
+            <button onclick="addProduct()" class="mt-4 bg-gray-500 text-white p-2 rounded hover:bg-gray-600">Thêm</button>
+        </div>
+
+        <!-- Danh sách sản phẩm -->
+        <div class="bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-xl font-semibold mb-4">Danh Sách Sản Phẩm</h2>
+            <table id="productTable" class="w-full border-collapse">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="border p-2">ID</th>
+                        <th class="border p-2">Tên</th>
+                        <th class="border p-2">Giá</th>
+                        <th class="border p-2">Số lượng</th>
+                        <th class="border p-2">Tổng giá trị</th>
+                        <th class="border p-2">Hành động</th>
+                    </tr>
+                </thead>
+                <tbody id="productList"></tbody>
+            </table>
+        </div>
+
+        <!-- Thông tin tổng giá trị và sản phẩm đắt nhất -->
+        <div class="mt-6">
+            <p id="totalValue" class="text-lg">Tổng giá trị hàng tồn kho: 0 VND</p>
+            <p id="mostExpensive" class="text-lg">Sản phẩm đắt nhất: Không có</p>
+        </div>
+    </div>
+
+    <script>
+        class Product {
+            constructor(id, name, price, quantity) {
+                this.id = id;
+                this.name = name;
+                this.price = parseInt(price);
+                this.quantity = parseInt(quantity);
+            }
+        }
+
+        let products = [
+            new Product(1, "Iphone 12", 6000000, 3),
+            new Product(2, "Samsung S6", 1000000, 4)
+        ];
+
+        function addProduct() {
+            const id = document.getElementById('productId').value;
+            const name = document.getElementById('productName').value;
+            const price = document.getElementById('productPrice').value;
+            const quantity = document.getElementById('productQuantity').value;
+
+            if (id && name && price && quantity) {
+                // Kiểm tra ID trùng
+                if (products.some(product => product.id == id)) {
+                    alert("ID sản phẩm đã tồn tại! Vui lòng chọn ID khác.");
+                    return;
+                }
+
+                const product = new Product(id, name, price, quantity);
+                products.push(product);
+                displayProducts();
+                clearForm();
+            } else {
+                alert("Vui lòng điền đầy đủ thông tin!");
+            }
+        }
+
+        function editProduct(index) {
+            const product = products[index];
+            document.getElementById('productId').value = product.id;
+            document.getElementById('productName').value = product.name;
+            document.getElementById('productPrice').value = product.price;
+            document.getElementById('productQuantity').value = product.quantity;
+
+            // Xóa sản phẩm cũ và chờ người dùng cập nhật
+            products.splice(index, 1);
+            displayProducts();
+        }
+
+        function deleteProduct(index) {
+            products.splice(index, 1);
+            displayProducts();
+        }
+
+        function calculateTotalInventoryValue() {
+            let total = 0;
+            products.forEach(product => {
+                total += product.price * product.quantity;
+            });
+            return total.toLocaleString('vi-VN');
+        }
+
+        function findMostExpensiveProduct() {
+            if (products.length === 0) return "Không có";
+            let maxPriceProduct = products[0];
+            products.forEach(product => {
+                if (product.price > maxPriceProduct.price) {
+                    maxPriceProduct = product;
+                }
+            });
+            return `${maxPriceProduct.name} (${maxPriceProduct.price.toLocaleString('vi-VN')} VND)`;
+        }
+
+        function displayProducts() {
+            const productList = document.getElementById('productList');
+            productList.innerHTML = '';
+            products.forEach((product, index) => {
+                const row = document.createElement('tr');
+                const totalValue = (product.price * product.quantity).toLocaleString('vi-VN');
+                row.innerHTML = `
+                    <td class="border p-2">${product.id}</td>
+                    <td class="border p-2">${product.name}</td>
+                    <td class="border p-2">${product.price.toLocaleString('vi-VN')} VND</td>
+                    <td class="border p-2">${product.quantity}</td>
+                    <td class="border p-2">${totalValue} VND</td>
+                    <td class="border p-2">
+                        <button onclick="editProduct(${index})" class="bg-yellow-500 text-white p-1 rounded hover:bg-yellow-600 mr-2">Sửa</button>
+                        <button onclick="deleteProduct(${index})" class="bg-red-500 text-white p-1 rounded hover:bg-red-600">Xóa</button>
+                    </td>
+                `;
+                productList.appendChild(row);
+            });
+
+            // Cập nhật tổng giá trị và sản phẩm đắt nhất
+            document.getElementById('totalValue').textContent = `Tổng giá trị hàng tồn kho: ${calculateTotalInventoryValue()} VND`;
+            document.getElementById('mostExpensive').textContent = `Sản phẩm đắt nhất: ${findMostExpensiveProduct()}`;
+        }
+
+        function clearForm() {
+            document.getElementById('productId').value = '';
+            document.getElementById('productName').value = '';
+            document.getElementById('productPrice').value = '';
+            document.getElementById('productQuantity').value = '';
+        }
+
+        // Hiển thị danh sách ban đầu
+        displayProducts();
+    </script>
+</body>
+</html>

@@ -19,7 +19,7 @@ body {
     padding: 20px;
     border-radius: 8px;
     text-align: center;
-    max-width: 600px;
+    width: 600px;
 }
 
 h1 {
@@ -27,24 +27,35 @@ h1 {
     margin-bottom: 20px;
 }
 
-.image-display-box {
+
+.image-wrapper {
     width: 100%;
-    height: 350px;
+    height: 350px; /* Chiều cao cố định */
+    position: relative; /* Quan trọng */
+    margin-bottom: 20px;
+}
+
+.image-display-box {
+    position: absolute; /* Quan trọng */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     border: 1px solid #ddd;
     border-radius: 5px;
     overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
     background-color: #eee;
 }
 
 #mainImage {
+    position: absolute; /* Quan trọng */
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
+    object-fit: cover; /* Hoặc contain tùy ý muốn */
     display: block;
-    transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
 }
 
 .slider-controls {

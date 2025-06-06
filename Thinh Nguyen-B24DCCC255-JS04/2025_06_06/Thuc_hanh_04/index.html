@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trình chiếu ảnh bằng DOM</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+    <div class="slider-container">
+        <h1>Trình chiếu ảnh bằng DOM</h1>
+        
+        <div class="image-wrapper">
+            <div class="image-display-box">
+                <img id="mainImage" src="./assets/img/bien.jpg" alt="Biển">
+                
+                <div class="loading-overlay" id="loadingOverlay">
+                    <div class="spinner"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="slider-controls">
+            <button id="prev-button" class="slider-button">
+                ← Trước
+            </button>
+            <button id="next-button" class="slider-button">
+                Sau →
+            </button>
+        </div>
+
+        <div class="dots-container" id="dotsContainer">
+            </div>
+
+        <div class="auto-controls">
+            <button id="autoBtn" class="auto-btn active">Auto: ON</button>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <span id="timeLeft">5s</span>
+        </div>
+        
+        <div class="preload-images" id="preloadContainer"></div>
+    </div>
+
+    <script src="./assets/script.js"></script>
+</body>
+</html>

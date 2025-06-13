@@ -1,6 +1,6 @@
 class ImageSlider {
     constructor() {
-        this.autoPlayInterval = 5000;
+        this.autoPlayInterval = 50000;
         this.currentIndex = 0;
         this.isAutoPlay = true;
         this.isTransitioning = false;
